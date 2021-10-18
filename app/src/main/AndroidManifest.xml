@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SpecialDelights">
         <activity
+            android:name=".GelatoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LollipopActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BrownieActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
