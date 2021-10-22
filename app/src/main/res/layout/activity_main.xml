@@ -19,7 +19,7 @@
         android:layout_width="200dp"
         android:scaleType="centerCrop"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/bbb" />
+        android:src="@drawable/logo" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,7 +35,37 @@
             android:layout_marginTop="100dp"
             android:layout_gravity="center_horizontal"
             android:drawableLeft="@drawable/brownie"
+            android:onClick="onClickBrownie"
             android:text="@string/brownie_text" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="90dp"
+            android:visibility="gone"
+            android:text="Caramel Chocolate Chip brownie"
+            android:id="@+id/caramel_brownie"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="90dp"
+            android:visibility="gone"
+            android:text="Cocoa Fudge brownie"
+            android:id="@+id/fudge_brownie"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="90dp"
+            android:visibility="gone"
+            android:text="Strawberry Cheesecake brownie"
+            android:id="@+id/cheesecake_brownie"
+            />
 
         <Button
             android:id="@+id/lollipop_button"
@@ -44,9 +74,40 @@
             android:layout_marginTop="20dp"
             android:layout_gravity="center_horizontal"
             android:drawableLeft="@drawable/lolli"
+            android:onClick="onClickLollipop"
             android:text="@string/lollipop_text"
             />
-        
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="90dp"
+            android:visibility="gone"
+            android:text="Watermelon pop"
+            android:id="@+id/watermelon_lolli"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="90dp"
+            android:visibility="gone"
+            android:text="Berry Medley pop"
+            android:id="@+id/berry_lolli"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="90dp"
+            android:visibility="gone"
+            android:text="Pineapple pop"
+            android:id="@+id/pineappple_lolli"
+            />
+
         <Button
             android:id="@+id/gelato_button"
             android:layout_width="wrap_content"
@@ -54,9 +115,37 @@
             android:layout_marginTop="20dp"
             android:layout_gravity="center_horizontal"
             android:drawableLeft="@drawable/gelato"
+            android:onClick="onClickGelato"
             android:text="@string/gelato_text"
             />
 
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="90dp"
+            android:visibility="gone"
+            android:text="ChocoNut Gelato"
+            android:id="@+id/chocoNut_cream"
+            />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="90dp"
+            android:visibility="gone"
+            android:text="Oreo-Caramel Gelato"
+            android:id="@+id/oreo_cream"
+            />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="90dp"
+            android:visibility="gone"
+            android:text="Vanilla-pistachio Gelato"
+            android:id="@+id/vanilla_cream"
+            />
         <Button
             android:id="@+id/complete_button"
             android:layout_width="wrap_content"
