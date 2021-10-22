@@ -3,6 +3,6 @@
     <string name="brownie_text">Brownies</string>
     <string name="lollipop_text">Lollipops</string>
     <string name="gelato_text">Gelato</string>
-    <string name="on"></string>
-    <string name="off"></string>
+    <string name="on">Toppings</string>
+    <string name="off">No Toppings</string>
 </resources>

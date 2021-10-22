@@ -43,19 +43,45 @@
             android:layout_marginTop="7dp"
             android:layout_marginLeft="90dp"
             android:visibility="gone"
+            android:onClick="onCheckboxClickedBrownie"
             android:text="Caramel Chocolate Chip brownie"
             android:id="@+id/caramel_brownie"
             />
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
-            android:layout_marginLeft="90dp"
-            android:visibility="gone"
-            android:text="Cocoa Fudge brownie"
-            android:id="@+id/fudge_brownie"
-            />
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:onClick="onSwitchClickedCaramel"
+                android:textOn="@string/on"
+                android:textOff="@string/off"
+                android:id="@+id/caramel_switch" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/caramel_radioGp">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nuts"
+                    android:id="@+id/radio_BNuts1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Caramel"
+                    android:id="@+id/radio_BCaramel1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chocolate Syrup"
+                    android:id="@+id/radio_BChocSyrup1" />
+            </RadioGroup>
 
         <CheckBox
             android:layout_width="wrap_content"
@@ -63,9 +89,91 @@
             android:layout_marginTop="7dp"
             android:layout_marginLeft="90dp"
             android:visibility="gone"
+            android:onClick="onCheckboxClickedBrownie"
+            android:text="Cocoa Fudge brownie"
+            android:id="@+id/fudge_brownie"
+            />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:onClick="onSwitchClickedFudge"
+                android:textOn="@string/on"
+                android:textOff="@string/off"
+                android:id="@+id/fudge_switch" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/fudge_radioGp">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nuts"
+                    android:id="@+id/radio_nuts2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Caramel"
+                    android:id="@+id/radio_caramel2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chocolate Syrup"
+                    android:id="@+id/radio_chocSyrup2" />
+            </RadioGroup>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="90dp"
+            android:visibility="gone"
+            android:onClick="onCheckboxClickedBrownie"
             android:text="Strawberry Cheesecake brownie"
             android:id="@+id/cheesecake_brownie"
             />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:onClick="onSwitchClickedCheesecake"
+                android:textOn="@string/on"
+                android:textOff="@string/off"
+                android:id="@+id/cheesecake_switch" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/cheesecake_radioGp">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nuts"
+                    android:id="@+id/radio_nuts3" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Caramel"
+                    android:id="@+id/radio_caramel3" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chocolate Syrup"
+                    android:id="@+id/radio_chocSyrup3" />
+            </RadioGroup>
 
         <Button
             android:id="@+id/lollipop_button"
@@ -125,27 +233,156 @@
             android:layout_marginTop="7dp"
             android:layout_marginLeft="90dp"
             android:visibility="gone"
+            android:onClick="onCheckboxClickedGelato"
             android:text="ChocoNut Gelato"
             android:id="@+id/chocoNut_cream"
             />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:onClick="onSwitchClickedChocoNut"
+                android:textOn="@string/on"
+                android:textOff="@string/off"
+                android:id="@+id/chocoNut_switch" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/chocoNut_radioGp">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nuts"
+                    android:id="@+id/radio_GNuts1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sprinkles"
+                    android:id="@+id/radio_GSprinkles1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Caramel"
+                    android:id="@+id/radio_GCaramel1" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chocolate Syrup"
+                    android:id="@+id/radio_GChocSyrup1" />
+            </RadioGroup>
+
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
             android:layout_marginLeft="90dp"
             android:visibility="gone"
+            android:onClick="onCheckboxClickedGelato"
             android:text="Oreo-Caramel Gelato"
             android:id="@+id/oreo_cream"
             />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:onClick="onSwitchClickedOreo"
+                android:textOn="@string/on"
+                android:textOff="@string/off"
+                android:id="@+id/oreo_switch" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/oreo_radioGp">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nuts"
+                    android:id="@+id/radio_GNuts2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sprinkles"
+                    android:id="@+id/radio_GSprinkles2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Caramel"
+                    android:id="@+id/radio_GCaramel2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chocolate Syrup"
+                    android:id="@+id/radio_GChocSyrup2" />
+            </RadioGroup>
+
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
             android:layout_marginLeft="90dp"
             android:visibility="gone"
+            android:onClick="onCheckboxClickedGelato"
             android:text="Vanilla-pistachio Gelato"
             android:id="@+id/vanilla_cream"
             />
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:onClick="onSwitchClickedVanillaP"
+                android:textOn="@string/on"
+                android:textOff="@string/off"
+                android:id="@+id/vanillaP_switch" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/vanilla_radioGp">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nuts"
+                    android:id="@+id/radio_GNuts3" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sprinkles"
+                    android:id="@+id/radio_GSprinkles3" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Caramel"
+                    android:id="@+id/radio_GCaramel3" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chocolate Syrup"
+                    android:id="@+id/radio_GChocSyrup3" />
+            </RadioGroup>
+
         <Button
             android:id="@+id/complete_button"
             android:layout_width="wrap_content"
