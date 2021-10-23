@@ -7,14 +7,42 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.Switch;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.HashSet;
 
 public class MainActivity extends AppCompatActivity {
-
+    HashSet<String> myList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /*if(savedInstanceState != null){
+            myList= new HashSet<String>(savedInstanceState.getStringArrayList("myList"));
+            TextView textView= (TextView) findViewById(R.id.text_beachSelctions);
+            textView.setText("Beach Buckets contents: \n");
+            for(String v: myList){
+
+                textView.append(v);
+                textView.append(newLine);
+
+            }
+        }
+        else{
+            myList= new HashSet<String>();
+        }
+        */
+
     }
+
+
+    /*@Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        ArrayList<String> temp = new ArrayList<String>(myList);
+        savedInstanceState.putStringArrayList("myList", temp);
+    }*/
 
 
     public void onClickBrownie(View view){
@@ -76,20 +104,53 @@ public class MainActivity extends AppCompatActivity {
         boolean checked2 = fudgeCheckbox.isChecked();
         boolean checked3 = cheesecakeCheckbox.isChecked();
 
-        if (checked1)
+        if (checked1) {
             caramelSwitch.setVisibility(View.VISIBLE);
-        else
+        }
+        else {
             caramelSwitch.setVisibility(View.GONE);
+        }
+        if (checked2) {
+            fudgeSwitch.setVisibility(View.VISIBLE);
+        }
+        else {
+            fudgeSwitch.setVisibility(View.GONE);
+        }
+        if (checked3) {
+            cheesecakeSwitch.setVisibility(View.VISIBLE);
+        }
+        else {
+            cheesecakeSwitch.setVisibility(View.GONE);
+        }
+    }
+    public void onCheckboxClickedLollipop(View view){
+        CheckBox watermelonCheckbox = (CheckBox) findViewById(R.id.watermelon_lolli);
+        CheckBox berryCheckbox= (CheckBox) findViewById(R.id.berry_lolli);
+        CheckBox pineappleCheckbox= (CheckBox) findViewById(R.id.pineappple_lolli);
+
+
+        Switch watermelonSwitch = (Switch) findViewById(R.id.watermelon_switch);
+        Switch berrySwitch = (Switch) findViewById(R.id.berry_switch);
+        Switch pineappleSwitch = (Switch) findViewById(R.id.pineapple_switch);
+
+        boolean checked1 = watermelonCheckbox.isChecked();
+        boolean checked2 = berryCheckbox.isChecked();
+        boolean checked3 = pineappleCheckbox.isChecked();
+
+        if (checked1)
+            watermelonSwitch.setVisibility(View.VISIBLE);
+        else
+            watermelonSwitch.setVisibility(View.GONE);
 
         if (checked2)
-            fudgeSwitch.setVisibility(View.VISIBLE);
+            berrySwitch.setVisibility(View.VISIBLE);
         else
-            fudgeSwitch.setVisibility(View.GONE);
+            berrySwitch.setVisibility(View.GONE);
 
         if (checked3)
-            cheesecakeSwitch.setVisibility(View.VISIBLE);
+            pineappleSwitch.setVisibility(View.VISIBLE);
         else
-            cheesecakeSwitch.setVisibility(View.GONE);
+            pineappleSwitch.setVisibility(View.GONE);
 
     }
 
@@ -97,6 +158,7 @@ public class MainActivity extends AppCompatActivity {
         CheckBox chocoNutCheckbox = (CheckBox) findViewById(R.id.chocoNut_cream);
         CheckBox oreoCheckbox= (CheckBox) findViewById(R.id.oreo_cream);
         CheckBox vanillaCheckbox= (CheckBox) findViewById(R.id.vanilla_cream);
+
 
         Switch chocoNutSwitch = (Switch) findViewById(R.id.chocoNut_switch);
         Switch oreoSwitch = (Switch) findViewById(R.id.oreo_switch);
@@ -123,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //Switch Code
+    //Switch Code for Brownies
     public void onSwitchClickedCaramel(View view){
         RadioGroup caramelRadio = (RadioGroup) findViewById(R.id.caramel_radioGp);
         boolean on = ((Switch) view).isChecked();
@@ -157,6 +219,42 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Switch Code for Lollipops
+    public void onSwitchClickedWatermelon(View view){
+        RadioGroup watermelonRadio = (RadioGroup) findViewById(R.id.watermelon_radioGp);
+        boolean on = ((Switch) view).isChecked();
+
+        if (on)
+            watermelonRadio.setVisibility(View.VISIBLE);
+        else
+            watermelonRadio.setVisibility(View.GONE);
+
+    }
+
+    public void onSwitchClickedBerry(View view){
+        RadioGroup berryRadio = (RadioGroup) findViewById(R.id.berry_radioGp);
+        boolean on = ((Switch) view).isChecked();
+
+        if (on)
+            berryRadio.setVisibility(View.VISIBLE);
+        else
+            berryRadio.setVisibility(View.GONE);
+
+    }
+
+    public void onSwitchClickedPineapple(View view){
+        RadioGroup pineappleRadio = (RadioGroup) findViewById(R.id.pineapple_radioGp);
+        boolean on = ((Switch) view).isChecked();
+
+        if (on)
+            pineappleRadio.setVisibility(View.VISIBLE);
+        else
+            pineappleRadio.setVisibility(View.GONE);
+
+    }
+
+
+    //Switch Code for Gelato
     public void onSwitchClickedChocoNut(View view){
         RadioGroup chocoNutRadio = (RadioGroup) findViewById(R.id.chocoNut_radioGp);
         boolean on = ((Switch) view).isChecked();
