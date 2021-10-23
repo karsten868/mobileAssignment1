@@ -27,7 +27,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="1200dp"
             android:orientation="vertical"
             android:padding="16dp">
 
@@ -56,11 +56,11 @@
                 android:id="@+id/caramel_switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="20dp"
                 android:onClick="onSwitchClickedCaramel"
                 android:textOff="@string/off"
                 android:textOn="@string/on"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="120dp"
                 android:visibility="gone" />
 
             <RadioGroup
@@ -74,24 +74,25 @@
                     android:id="@+id/radio_BNuts1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
+                    android:onClick="onRadioButtonClicked"
                     android:text="Nuts" />
 
                 <RadioButton
                     android:id="@+id/radio_BCaramel1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Caramel" />
 
                 <RadioButton
                     android:id="@+id/radio_BChocSyrup1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Chocolate Syrup" />
             </RadioGroup>
 
@@ -104,16 +105,16 @@
                 android:onClick="onCheckboxClickedBrownie"
                 android:text="Cocoa Fudge brownie"
                 android:visibility="gone" />
-
+            <!--android:onClick="onBrownieCheckboxClickedBrownie"-->
             <Switch
                 android:id="@+id/fudge_switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="20dp"
                 android:onClick="onSwitchClickedFudge"
                 android:textOff="@string/off"
                 android:textOn="@string/on"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="120dp"
                 android:visibility="gone" />
 
             <RadioGroup
@@ -127,24 +128,24 @@
                     android:id="@+id/radio_nuts2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Nuts" />
 
                 <RadioButton
                     android:id="@+id/radio_caramel2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Caramel" />
 
                 <RadioButton
                     android:id="@+id/radio_chocSyrup2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Chocolate Syrup" />
             </RadioGroup>
 
@@ -157,16 +158,16 @@
                 android:onClick="onCheckboxClickedBrownie"
                 android:text="Strawberry Cheesecake brownie"
                 android:visibility="gone" />
-
+            <!--android:onClick="onCheckboxClickedBrownie"-->
             <Switch
                 android:id="@+id/cheesecake_switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="20dp"
                 android:onClick="onSwitchClickedCheesecake"
                 android:textOff="@string/off"
                 android:textOn="@string/on"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="120dp"
                 android:visibility="gone" />
 
             <RadioGroup
@@ -180,24 +181,24 @@
                     android:id="@+id/radio_nuts3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Nuts" />
 
                 <RadioButton
                     android:id="@+id/radio_caramel3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Caramel" />
 
                 <RadioButton
                     android:id="@+id/radio_chocSyrup3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Chocolate Syrup" />
             </RadioGroup>
 
@@ -212,6 +213,7 @@
                 android:text="@string/lollipop_text" />
 
             <CheckBox
+
                 android:id="@+id/watermelon_lolli"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -220,17 +222,17 @@
                 android:onClick="onCheckboxClickedLollipop"
                 android:text="Watermelon pop"
                 android:visibility="gone" />
-
+            <!--android:onClick="onCheckboxClickedLollipop"-->
 
             <Switch
                 android:id="@+id/watermelon_switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="20dp"
                 android:onClick="onSwitchClickedWatermelon"
                 android:textOff="@string/off"
                 android:textOn="@string/on"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="120dp"
                 android:visibility="gone" />
 
             <RadioGroup
@@ -244,29 +246,29 @@
                     android:id="@+id/radio_watermelonSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Small" />
 
                 <RadioButton
                     android:id="@+id/radio_watermelonMedium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Mdedium" />
 
                 <RadioButton
                     android:id="@+id/radio_watermelonLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Large" />
             </RadioGroup>
 
 
-            <CheckBox
+           <CheckBox
                 android:id="@+id/berry_lolli"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -275,16 +277,16 @@
                 android:onClick="onCheckboxClickedLollipop"
                 android:text="Berry Medley pop"
                 android:visibility="gone" />
-
+            <!--android:onClick="onCheckboxClickedLollipop"-->
             <Switch
                 android:id="@+id/berry_switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="20dp"
                 android:onClick="onSwitchClickedBerry"
                 android:textOff="@string/off"
                 android:textOn="@string/on"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="120dp"
                 android:visibility="gone" />
 
             <RadioGroup
@@ -298,30 +300,30 @@
                     android:id="@+id/radio_berrySmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Small" />
 
                 <RadioButton
                     android:id="@+id/radio_berryMedium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
-                    android:text="Mdedium" />
+                    android:layout_marginTop="20dp"
+                    android:text="Medium" />
 
                 <RadioButton
                     android:id="@+id/radio_berryLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Large" />
             </RadioGroup>
 
 
             <CheckBox
-                android:id="@+id/pineappple_lolli"
+                android:id="@+id/pineapple_lolli"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="90dp"
@@ -329,16 +331,16 @@
                 android:onClick="onCheckboxClickedLollipop"
                 android:text="Pineapple pop"
                 android:visibility="gone" />
-
+            <!--android:onClick="onCheckboxClickedLollipop"-->
             <Switch
                 android:id="@+id/pineapple_switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="20dp"
                 android:onClick="onSwitchClickedPineapple"
                 android:textOff="@string/off"
                 android:textOn="@string/on"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="120dp"
                 android:visibility="gone" />
 
             <RadioGroup
@@ -352,24 +354,24 @@
                     android:id="@+id/radio_pineappleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Small" />
 
                 <RadioButton
                     android:id="@+id/radio_pineappleMedium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Mdedium" />
 
                 <RadioButton
                     android:id="@+id/radio_pineappleLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Large" />
             </RadioGroup>
 
@@ -384,25 +386,24 @@
                 android:onClick="onClickGelato"
                 android:text="@string/gelato_text" />
 
-            <CheckBox
+           <CheckBox
                 android:id="@+id/chocoNut_cream"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="90dp"
                 android:layout_marginTop="7dp"
-                android:onClick="onCheckboxClickedGelato"
                 android:text="ChocoNut Gelato"
                 android:visibility="gone" />
-
+            <!--android:onClick="onCheckboxClickedGelato"-->
             <Switch
                 android:id="@+id/chocoNut_switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="20dp"
                 android:onClick="onSwitchClickedChocoNut"
                 android:textOff="@string/off"
                 android:textOn="@string/on"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="120dp"
                 android:visibility="gone" />
 
             <RadioGroup
@@ -416,32 +417,32 @@
                     android:id="@+id/radio_GNuts1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Nuts" />
 
                 <RadioButton
                     android:id="@+id/radio_GSprinkles1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Sprinkles" />
 
                 <RadioButton
                     android:id="@+id/radio_GCaramel1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Caramel" />
 
                 <RadioButton
                     android:id="@+id/radio_GChocSyrup1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Chocolate Syrup" />
             </RadioGroup>
 
@@ -451,19 +452,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="90dp"
                 android:layout_marginTop="7dp"
-                android:onClick="onCheckboxClickedGelato"
+
                 android:text="Oreo-Caramel Gelato"
                 android:visibility="gone" />
-
+            <!--android:onClick="onCheckboxClickedGelato"-->
             <Switch
                 android:id="@+id/oreo_switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="20dp"
                 android:onClick="onSwitchClickedOreo"
                 android:textOff="@string/off"
                 android:textOn="@string/on"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="120dp"
                 android:visibility="gone" />
 
             <RadioGroup
@@ -477,32 +478,32 @@
                     android:id="@+id/radio_GNuts2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Nuts" />
 
                 <RadioButton
                     android:id="@+id/radio_GSprinkles2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Sprinkles" />
 
                 <RadioButton
                     android:id="@+id/radio_GCaramel2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Caramel" />
 
                 <RadioButton
                     android:id="@+id/radio_GChocSyrup2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Chocolate Syrup" />
             </RadioGroup>
 
@@ -512,19 +513,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="90dp"
                 android:layout_marginTop="7dp"
-                android:onClick="onCheckboxClickedGelato"
+
                 android:text="Vanilla-pistachio Gelato"
                 android:visibility="gone" />
-
+            <!--android:onClick="onCheckboxClickedGelato"-->
             <Switch
                 android:id="@+id/vanillaP_switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="20dp"
                 android:onClick="onSwitchClickedVanillaP"
                 android:textOff="@string/off"
                 android:textOn="@string/on"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="120dp"
                 android:visibility="gone" />
 
             <RadioGroup
@@ -538,32 +539,32 @@
                     android:id="@+id/radio_GNuts3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Nuts" />
 
                 <RadioButton
                     android:id="@+id/radio_GSprinkles3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Sprinkles" />
 
                 <RadioButton
                     android:id="@+id/radio_GCaramel3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Caramel" />
 
                 <RadioButton
                     android:id="@+id/radio_GChocSyrup3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="160dp"
+                    android:layout_marginTop="20dp"
                     android:text="Chocolate Syrup" />
             </RadioGroup>
 
@@ -573,7 +574,18 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_marginTop="50dp"
+                android:onClick="onClickAdd"
                 android:text="Add To Cart" />
+
+            <TextView
+                android:id="@+id/text_orders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:text="List of items"
+
+                />
 
         </LinearLayout>
 

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -13,38 +14,39 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 public class MainActivity extends AppCompatActivity {
-    HashSet<String> myList;
+    ArrayList<String> orderList;
+    String spacing= ", ";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        /*if(savedInstanceState != null){
-            myList= new HashSet<String>(savedInstanceState.getStringArrayList("myList"));
-            TextView textView= (TextView) findViewById(R.id.text_beachSelctions);
-            textView.setText("Beach Buckets contents: \n");
-            for(String v: myList){
+        if(savedInstanceState != null){
+            orderList= new ArrayList<String>(savedInstanceState.getStringArrayList("orderList"));
+            /*TextView textView= (TextView) findViewById(R.id.text_orders);
+            textView.setText("List of items: \n");
+            for(String v: orderList){
 
                 textView.append(v);
-                textView.append(newLine);
 
-            }
+
+            }*/
         }
         else{
-            myList= new HashSet<String>();
+            orderList= new ArrayList<String>();
         }
-        */
+
 
     }
 
 
-    /*@Override
+    @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
-        ArrayList<String> temp = new ArrayList<String>(myList);
-        savedInstanceState.putStringArrayList("myList", temp);
-    }*/
+        ArrayList<String> temp = new ArrayList<String>(orderList);
+        savedInstanceState.putStringArrayList("orderList", temp);
+    }
 
-
+    //OnClick Button code
     public void onClickBrownie(View view){
         CheckBox caramelCheckbox = (CheckBox) findViewById(R.id.caramel_brownie);
         CheckBox fudgeCheckbox= (CheckBox) findViewById(R.id.fudge_brownie);
@@ -63,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClickLollipop(View view){
         CheckBox watermelonCheckbox = (CheckBox) findViewById(R.id.watermelon_lolli);
         CheckBox berryCheckbox= (CheckBox) findViewById(R.id.berry_lolli);
-        CheckBox pineappleCheckbox= (CheckBox) findViewById(R.id.pineappple_lolli);
+        CheckBox pineappleCheckbox= (CheckBox) findViewById(R.id.pineapple_lolli);
         if (watermelonCheckbox.getVisibility() == View.VISIBLE) {
             watermelonCheckbox.setVisibility(View.GONE);
             berryCheckbox.setVisibility(View.GONE);
@@ -90,11 +92,27 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //Checkbox Code
-    public void onCheckboxClickedBrownie(View view){
+    /*public void onBrownieCheckboxClickedBrownie(View view){
         CheckBox caramelCheckbox = (CheckBox) findViewById(R.id.caramel_brownie);
-        CheckBox fudgeCheckbox= (CheckBox) findViewById(R.id.fudge_brownie);
-        CheckBox cheesecakeCheckbox= (CheckBox) findViewById(R.id.cheesecake_brownie);
+        boolean checked1 = caramelCheckbox.isChecked();
+
+        String caramelBrownieType= caramelCheckbox.getText().toString();
+        caramelBrownieType+= spacing;
+
+
+        if (checked1==true) {
+            orderList.add(caramelBrownieType);
+
+        }
+        else{
+            orderList.remove(caramelBrownieType);
+        }
+    }*/
+    //Checkbox Code
+    public void onCheckboxClickedBrownie(View view) {
+        CheckBox caramelCheckbox = (CheckBox) findViewById(R.id.caramel_brownie);
+        CheckBox fudgeCheckbox = (CheckBox) findViewById(R.id.fudge_brownie);
+        CheckBox cheesecakeCheckbox = (CheckBox) findViewById(R.id.cheesecake_brownie);
 
         Switch caramelSwitch = (Switch) findViewById(R.id.caramel_switch);
         Switch fudgeSwitch = (Switch) findViewById(R.id.fudge_switch);
@@ -104,57 +122,148 @@ public class MainActivity extends AppCompatActivity {
         boolean checked2 = fudgeCheckbox.isChecked();
         boolean checked3 = cheesecakeCheckbox.isChecked();
 
-        if (checked1) {
+        String caramelBrownieType = caramelCheckbox.getText().toString();
+        caramelBrownieType += spacing;
+
+        String fudgeBrownieType = fudgeCheckbox.getText().toString();
+        fudgeBrownieType += spacing;
+
+
+        String cheesecakeBrownieType = cheesecakeCheckbox.getText().toString();
+        cheesecakeBrownieType += spacing;
+
+        if (checked1 == true) {
+            orderList.add(caramelBrownieType);
             caramelSwitch.setVisibility(View.VISIBLE);
-        }
-        else {
+        } else {
+            orderList.remove(caramelBrownieType);
             caramelSwitch.setVisibility(View.GONE);
+
         }
-        if (checked2) {
+
+        if (checked2 == true) {
+            orderList.add(fudgeBrownieType);
             fudgeSwitch.setVisibility(View.VISIBLE);
-        }
-        else {
+
+        } else {
+            orderList.remove(fudgeBrownieType);
             fudgeSwitch.setVisibility(View.GONE);
+
         }
-        if (checked3) {
+
+        if (checked3 == true) {
+            orderList.add(cheesecakeBrownieType);
             cheesecakeSwitch.setVisibility(View.VISIBLE);
+        } else {
+            orderList.remove(cheesecakeBrownieType);
+            cheesecakeSwitch.setVisibility(View.GONE);
+
+        }
+
+    }
+        /*NEW CODE FOR HANDLING ADDING TO ODER LIST?????????????
+        NEW CODE FOR HANDLING ADDING TO ODER LIST?????????????
+        NEW CODE FOR HANDLING ADDING TO ODER LIST?????????????*//*
+
+       *//* if (checked1) {
+            //caramelSwitch.setVisibility(View.VISIBLE);
+            orderList.add(caramelBrownieType);
         }
         else {
-            cheesecakeSwitch.setVisibility(View.GONE);
+            //caramelSwitch.setVisibility(View.GONE);
+             orderList.remove(caramelBrownieType);
+        }*//*
+
+        if (checked2) {
+            //fudgeSwitch.setVisibility(View.VISIBLE);
+            orderList.add(fudgeBrownieType);
         }
-    }
+        else {
+            //fudgeSwitch.setVisibility(View.GONE);
+            orderList.remove(fudgeBrownieType);
+        }
+
+        if (checked3) {
+            //cheesecakeSwitch.setVisibility(View.VISIBLE);
+
+            orderList.add(cheescakeBrownieType);
+        }
+        else {
+            //cheesecakeSwitch.setVisibility(View.GONE);
+
+            orderList.remove(cheescakeBrownieType);
+        }
+
+
+
+
+
+    }*/
+
     public void onCheckboxClickedLollipop(View view){
         CheckBox watermelonCheckbox = (CheckBox) findViewById(R.id.watermelon_lolli);
         CheckBox berryCheckbox= (CheckBox) findViewById(R.id.berry_lolli);
-        CheckBox pineappleCheckbox= (CheckBox) findViewById(R.id.pineappple_lolli);
+        CheckBox pineappleCheckbox= (CheckBox) findViewById(R.id.pineapple_lolli);
 
 
         Switch watermelonSwitch = (Switch) findViewById(R.id.watermelon_switch);
         Switch berrySwitch = (Switch) findViewById(R.id.berry_switch);
         Switch pineappleSwitch = (Switch) findViewById(R.id.pineapple_switch);
 
-        boolean checked1 = watermelonCheckbox.isChecked();
-        boolean checked2 = berryCheckbox.isChecked();
-        boolean checked3 = pineappleCheckbox.isChecked();
+        boolean checkedLollipop1 = watermelonCheckbox.isChecked();
+        boolean checkedLollipop2 = berryCheckbox.isChecked();
+        boolean checkedLollipop3 = pineappleCheckbox.isChecked();
 
-        if (checked1)
+
+        String watermelonType = watermelonCheckbox.getText().toString();
+        watermelonType += spacing;
+
+        String berryType = berryCheckbox.getText().toString();
+        berryType += spacing;
+
+        String pineappleType = pineappleCheckbox.getText().toString();
+        pineappleType += spacing;
+
+        if (checkedLollipop1==true) {
+
+            orderList.add(watermelonType);
             watermelonSwitch.setVisibility(View.VISIBLE);
-        else
+        }
+        else {
+            orderList.remove(watermelonType);
             watermelonSwitch.setVisibility(View.GONE);
 
-        if (checked2)
+
+        }
+
+        if (checkedLollipop2==true) {
+            orderList.add(berryType);
             berrySwitch.setVisibility(View.VISIBLE);
-        else
+
+
+        }
+        else {
+            orderList.remove(berryType);
             berrySwitch.setVisibility(View.GONE);
 
-        if (checked3)
+
+        }
+
+        if (checkedLollipop3==true) {
+            orderList.add(pineappleType);
             pineappleSwitch.setVisibility(View.VISIBLE);
-        else
+
+
+        }
+        else {
+            orderList.remove(pineappleType);
             pineappleSwitch.setVisibility(View.GONE);
 
+
+        }
     }
 
-    public void onCheckboxClickedGelato(View view){
+    /*public void onCheckboxClickedGelato(View view){
         CheckBox chocoNutCheckbox = (CheckBox) findViewById(R.id.chocoNut_cream);
         CheckBox oreoCheckbox= (CheckBox) findViewById(R.id.oreo_cream);
         CheckBox vanillaCheckbox= (CheckBox) findViewById(R.id.vanilla_cream);
@@ -168,22 +277,46 @@ public class MainActivity extends AppCompatActivity {
         boolean checked2 = oreoCheckbox.isChecked();
         boolean checked3 = vanillaCheckbox.isChecked();
 
-        if (checked1)
+        if (checked1) {
             chocoNutSwitch.setVisibility(View.VISIBLE);
-        else
+            String gelatoType = chocoNutCheckbox.getText().toString();
+            gelatoType += ", ";
+            orderList.add(gelatoType);
+        }
+        else {
             chocoNutSwitch.setVisibility(View.GONE);
+            String gelatoType = chocoNutCheckbox.getText().toString();
+            gelatoType += ", ";
+            orderList.remove(gelatoType);
+        }
 
-        if (checked2)
+        if (checked2) {
             oreoSwitch.setVisibility(View.VISIBLE);
-        else
+            String gelatoType = oreoCheckbox.getText().toString();
+            gelatoType += ", ";
+            orderList.add(gelatoType);
+        }
+        else {
             oreoSwitch.setVisibility(View.GONE);
+            String gelatoType = oreoCheckbox.getText().toString();
+            gelatoType += ", ";
+            orderList.remove(gelatoType);
+        }
 
-        if (checked3)
+        if (checked3) {
             vanillaSwitch.setVisibility(View.VISIBLE);
-        else
+            String gelatoType = vanillaCheckbox.getText().toString();
+            gelatoType += ", ";
+            orderList.add(gelatoType);
+        }
+        else {
             vanillaSwitch.setVisibility(View.GONE);
+            String gelatoType = vanillaCheckbox.getText().toString();
+            gelatoType += ", ";
+            orderList.remove(gelatoType);
+        }
+    }*/
 
-    }
 
     //Switch Code for Brownies
     public void onSwitchClickedCaramel(View view){
@@ -216,8 +349,9 @@ public class MainActivity extends AppCompatActivity {
             cheesecakeRadio.setVisibility(View.VISIBLE);
         else
             cheesecakeRadio.setVisibility(View.GONE);
+}
 
-    }
+
 
     //Switch Code for Lollipops
     public void onSwitchClickedWatermelon(View view){
@@ -286,6 +420,32 @@ public class MainActivity extends AppCompatActivity {
         else
             vanillaRadio.setVisibility(View.GONE);
 
+    }
+
+    //Radio Button Code for Brownies
+    public void onRadioButtonClicked(View view) {
+        RadioButton radioButton = ((RadioButton) view);
+        boolean checked = radioButton.isChecked();
+        String toppings = radioButton.getText().toString();
+        toppings += ", ";
+        if (checked) {
+            orderList.add(toppings);
+        }
+        else {
+
+            orderList.remove(toppings);
+        }
+    }
+
+    //Add to cart Button Code
+    public void onClickAdd(View view){
+        TextView textView= (TextView) findViewById(R.id.text_orders);
+        textView.setText("List of items: \n");
+        for(String v: orderList){
+
+            textView.append(v);
+            textView.append("\n");
+        }
     }
 
 }
