@@ -122,43 +122,20 @@ public class MainActivity extends AppCompatActivity {
         boolean checked2 = fudgeCheckbox.isChecked();
         boolean checked3 = cheesecakeCheckbox.isChecked();
 
-        String caramelBrownieType = caramelCheckbox.getText().toString();
-        caramelBrownieType += spacing;
-
-        String fudgeBrownieType = fudgeCheckbox.getText().toString();
-        fudgeBrownieType += spacing;
-
-
-        String cheesecakeBrownieType = cheesecakeCheckbox.getText().toString();
-        cheesecakeBrownieType += spacing;
-
-        if (checked1 == true) {
-            orderList.add(caramelBrownieType);
+        if (checked1)
             caramelSwitch.setVisibility(View.VISIBLE);
-        } else {
-            orderList.remove(caramelBrownieType);
+        else
             caramelSwitch.setVisibility(View.GONE);
 
-        }
-
-        if (checked2 == true) {
-            orderList.add(fudgeBrownieType);
+        if (checked2)
             fudgeSwitch.setVisibility(View.VISIBLE);
-
-        } else {
-            orderList.remove(fudgeBrownieType);
+        else
             fudgeSwitch.setVisibility(View.GONE);
 
-        }
-
-        if (checked3 == true) {
-            orderList.add(cheesecakeBrownieType);
+        if (checked3)
             cheesecakeSwitch.setVisibility(View.VISIBLE);
-        } else {
-            orderList.remove(cheesecakeBrownieType);
+        else
             cheesecakeSwitch.setVisibility(View.GONE);
-
-        }
 
     }
         /*NEW CODE FOR HANDLING ADDING TO ODER LIST?????????????
@@ -205,7 +182,6 @@ public class MainActivity extends AppCompatActivity {
         CheckBox berryCheckbox= (CheckBox) findViewById(R.id.berry_lolli);
         CheckBox pineappleCheckbox= (CheckBox) findViewById(R.id.pineapple_lolli);
 
-
         Switch watermelonSwitch = (Switch) findViewById(R.id.watermelon_switch);
         Switch berrySwitch = (Switch) findViewById(R.id.berry_switch);
         Switch pineappleSwitch = (Switch) findViewById(R.id.pineapple_switch);
@@ -215,59 +191,26 @@ public class MainActivity extends AppCompatActivity {
         boolean checkedLollipop3 = pineappleCheckbox.isChecked();
 
 
-        String watermelonType = watermelonCheckbox.getText().toString();
-        watermelonType += spacing;
-
-        String berryType = berryCheckbox.getText().toString();
-        berryType += spacing;
-
-        String pineappleType = pineappleCheckbox.getText().toString();
-        pineappleType += spacing;
-
-        if (checkedLollipop1==true) {
-
-            orderList.add(watermelonType);
+        if (checkedLollipop1)
             watermelonSwitch.setVisibility(View.VISIBLE);
-        }
-        else {
-            orderList.remove(watermelonType);
+        else
             watermelonSwitch.setVisibility(View.GONE);
 
-
-        }
-
-        if (checkedLollipop2==true) {
-            orderList.add(berryType);
+        if (checkedLollipop2)
             berrySwitch.setVisibility(View.VISIBLE);
-
-
-        }
-        else {
-            orderList.remove(berryType);
+        else
             berrySwitch.setVisibility(View.GONE);
 
-
-        }
-
-        if (checkedLollipop3==true) {
-            orderList.add(pineappleType);
+        if (checkedLollipop3)
             pineappleSwitch.setVisibility(View.VISIBLE);
-
-
-        }
-        else {
-            orderList.remove(pineappleType);
+        else
             pineappleSwitch.setVisibility(View.GONE);
-
-
-        }
     }
 
-    /*public void onCheckboxClickedGelato(View view){
+    public void onCheckboxClickedGelato(View view){
         CheckBox chocoNutCheckbox = (CheckBox) findViewById(R.id.chocoNut_cream);
         CheckBox oreoCheckbox= (CheckBox) findViewById(R.id.oreo_cream);
         CheckBox vanillaCheckbox= (CheckBox) findViewById(R.id.vanilla_cream);
-
 
         Switch chocoNutSwitch = (Switch) findViewById(R.id.chocoNut_switch);
         Switch oreoSwitch = (Switch) findViewById(R.id.oreo_switch);
@@ -277,45 +220,21 @@ public class MainActivity extends AppCompatActivity {
         boolean checked2 = oreoCheckbox.isChecked();
         boolean checked3 = vanillaCheckbox.isChecked();
 
-        if (checked1) {
+        if (checked1)
             chocoNutSwitch.setVisibility(View.VISIBLE);
-            String gelatoType = chocoNutCheckbox.getText().toString();
-            gelatoType += ", ";
-            orderList.add(gelatoType);
-        }
-        else {
+        else
             chocoNutSwitch.setVisibility(View.GONE);
-            String gelatoType = chocoNutCheckbox.getText().toString();
-            gelatoType += ", ";
-            orderList.remove(gelatoType);
-        }
 
-        if (checked2) {
+        if (checked2)
             oreoSwitch.setVisibility(View.VISIBLE);
-            String gelatoType = oreoCheckbox.getText().toString();
-            gelatoType += ", ";
-            orderList.add(gelatoType);
-        }
-        else {
+        else
             oreoSwitch.setVisibility(View.GONE);
-            String gelatoType = oreoCheckbox.getText().toString();
-            gelatoType += ", ";
-            orderList.remove(gelatoType);
-        }
 
-        if (checked3) {
+        if (checked3)
             vanillaSwitch.setVisibility(View.VISIBLE);
-            String gelatoType = vanillaCheckbox.getText().toString();
-            gelatoType += ", ";
-            orderList.add(gelatoType);
-        }
-        else {
+        else
             vanillaSwitch.setVisibility(View.GONE);
-            String gelatoType = vanillaCheckbox.getText().toString();
-            gelatoType += ", ";
-            orderList.remove(gelatoType);
-        }
-    }*/
+    }
 
 
     //Switch Code for Brownies
